@@ -15,4 +15,4 @@ use App\Http\Controllers\CompanieController;
 |
 */
 Route::get('users',[UserController::class,'index']);
-Route::get('companies',[CompanieController::class,'companies']);
+
