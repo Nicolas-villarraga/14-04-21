@@ -23,9 +23,9 @@
                 <tbody>
                 @foreach($companies as $companie)
                     <tr>
-                        <td>{{ $user->id }}</td>
-                        <td>{{ $user->name }}</td>
-                        <td>{{ $user->nit }}</td>
+                        <td>{{ $companie->id }}</td>
+                        <td>{{ $companie->name }}</td>
+                        <td>{{ $companie->nit }}</td>
                     </tr>
                     @endforeach
                 </tbody>
