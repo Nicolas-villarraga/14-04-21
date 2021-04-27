@@ -32,5 +32,27 @@ class UserController extends Controller
         $user = User::find($id);
         # code...
         return view('user.show',compact('user'));
+        
+        
     }
+    
+  public function destroy($id)
+  {
+      # code...
+      $user = User::find($id)->delete();
+      return redirect('users'); 
+  }
+
+  public function edit($id)
+  {
+      # code...
+      $user = User::find($id);
+      return view('user.edit',compact('user'));
+  }
+  public function update(Request $request, $id)
+  {
+      # code...
+      $users=User::find($id)->update($request->all());
+      return redirect('users');
+  }
 }

@@ -34,9 +34,13 @@
                             <td>{{ $user->lastname }}</td>
                             <td>{{ $user-> email }}</td>
                             <td>
-                                <a href="{{url('users', $user->id )}}" class="btn btn-info btn-sm">detalles</a>
-                                <a href="" class="btn btn-warning btn-sm">editar</a>
-                                <a href="" class="btn btn-danger btn-sm">eliminar</a>
+                                <form action="{{url('users',$user->id)}}" method="post">
+                                    @method('delete')
+                                    @csrf
+                                    <a href="{{url('users',$user->id )}}" class="btn btn-info btn-sm">detalles</a>
+                                    <a href="{{url('users/edit',$user->id)}}" class="btn btn-warning btn-sm">editar</a>
+                                    <button type="submit" class="btn btn-danger btn-sm">eliminar</button>
+                                </form>
                             </td>
                         </tr>
                         @endforeach
