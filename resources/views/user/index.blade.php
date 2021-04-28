@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <title>One</title>
+    <title>Usuarios Registrados</title>
 </head>
 
 <body>
@@ -15,7 +15,11 @@
             <div class="col-mg-12">
                 <br>
                 <a href="{{url('users/create')}}" class="btn btn-primary ">Crear Nuevo Usario</a>
-                <br><br>
+                <br>
+                <div class="alert alert-success">
+                
+                </div>
+                <br>
                 <table class="table table-striped table-bordered">
                     <thead>
                         <tr>

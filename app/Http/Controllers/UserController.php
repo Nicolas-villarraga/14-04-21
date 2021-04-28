@@ -25,7 +25,7 @@ class UserController extends Controller
         # code...
         $user=User::create($request->all());
          
-        return redirect('users');
+        return redirect('users')->with('status','Se a creado correctamente');
     }
     public function show($id)
     {

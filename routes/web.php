@@ -14,6 +14,9 @@ use App\Http\Controllers\CompanieController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::redirect('/','users');
+
 Route::get('users',[UserController::class,'index']);
 Route::get('users/create',[UserController::class,'create']);
 Route::post('users',[UserController::class,'store']);
