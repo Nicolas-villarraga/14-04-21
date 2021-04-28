@@ -25,7 +25,7 @@ class UserController extends Controller
         # code...
         $user=User::create($request->all());
          
-        return redirect('users')->with('status','Se a creado correctamente');
+        return redirect('users')->with('status-1','Se a creado correctamente');
     }
     public function show($id)
     {
@@ -40,7 +40,7 @@ class UserController extends Controller
   {
       # code...
       $user = User::find($id)->delete();
-      return redirect('users'); 
+      return redirect('users')->with('status-2','se a eliminado correctamente'); 
   }
 
   public function edit($id)
@@ -53,6 +53,6 @@ class UserController extends Controller
   {
       # code...
       $users=User::find($id)->update($request->all());
-      return redirect('users');
+      return redirect('users')->with('status','Se a actualizado correctamente');
   }
 }

@@ -15,11 +15,17 @@
             <div class="col-mg-12">
                 <br>
                 <a href="{{url('users/create')}}" class="btn btn-primary ">Crear Nuevo Usario</a>
-                <br>
-                <div class="alert alert-success">
-                
+                @if(session('status-1'))
+                <div class="alert alert-success" type="create">
+                {{session('status-1')}}
                 </div>
-                <br>
+                @endif
+                @if(session('status-2'))
+                <div class="alert alert-danger" type="delete">
+                {{session('status-2')}}
+                </div>
+                @endif
+                <br><br>
                 <table class="table table-striped table-bordered">
                     <thead>
                         <tr>
